@@ -13,6 +13,8 @@
     <body>
     <?php
 
+            echo '<a href="/">НА ГЛАВНУЮ</a>';
+
             $mysqli = mysqli_connect('std-mysql', 'std_940_php2_exam', '12345678', 'std_940_php2_exam');    // подключаемся к БД
 
             if (mysqli_connect_errno()) // если не удаётся подключиться выводим сообщение

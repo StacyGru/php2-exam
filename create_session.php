@@ -13,9 +13,32 @@
     <body>
     <?php
         
+        echo '<a href="/">НА ГЛАВНУЮ</a>';
+
+        // if (!isset($num))
+        //     $num = 1;
+
+        // // выбрать тип вопроса и ввести вопрос
+        // if (!isset($_POST['add_question']) && !isset($_POST['add_radio']) && !isset($_POST['add_check']))  
+        //     echo '<form method="post">
+        //     <p class="header">Вопрос №'.$num.'</p>
+        //     <label for="type">Выберите тип:</label><br>
+        //     <select id="type" name="type">
+        //         <option value="type1">с открытым ответом (число)</option>
+        //         <option value="type2">с открытым ответом (положительное число)</option>
+        //         <option value="type3">с открытым ответом (строка)</option>
+        //         <option value="type4">с открытым ответом (текст)</option>
+        //         <option value="type5">с единственным выбором</option>
+        //         <option value="type6">с множественным выбором</option>
+        //         </select><br>
+
+        //     <label for="question">Введите вопрос: </label> <input required type="text" id="question" name="question"> </input><br>
+        //     <input type="submit" name="add_question" value="Добавить"></input>
+        //     </form>';
+
         if (!isset($_POST['finish']))
-            echo '<form name="add" method="post" action="">
-                <input type="submit" name="finish" value="Cоздать сессию"></input>
+            echo '<form name="create_session" method="post" action="">
+                <input type="submit" name="finish" value="Создать сессию"></input>
                 </form>';  //   кнопка создать сессию
         
         $permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyz';
@@ -36,6 +59,7 @@
             {
                 $link = '/open_session.php?link='.$current_link;
                 echo '<div class="ok">Сессия добавлена: <a href='.$link.'>ссылка</a></div>';
+                echo '<a href="/add_questions.php?link='.$current_link.'">Добавить вопросы</a>';
             }
         }
     ?>

@@ -12,6 +12,8 @@
         </head>
     <body>
     <?php
+        echo '<a href="/">НА ГЛАВНУЮ</a>';
+        
         if (isset($_GET['link']))
         {
             $mysqli = mysqli_connect('std-mysql', 'std_940_php2_exam', '12345678', 'std_940_php2_exam');    // подключаемся к БД
