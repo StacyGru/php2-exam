@@ -36,17 +36,39 @@
 
             while ($row = mysqli_fetch_assoc($sql_res)) // пока есть записи
             {                                           // выводим каждую запись как строку таблицы
+                $link = '/view_sessions.php?link='.$row['link'];
                 echo '<tr><td>'.$i.'</td>
                     <td>'.$row['link'].'</td>
                     <td>'.$row['status'].'</td>
-                    <td><a href="">Просмотр ответов</a></td>
-                    <td><a href="">Закрыть сессию</a></td>
-                    <td><a href="">Удалить сессию</a></td>
-                    <td><a href="">Редактировать вопросы</a></td></tr>';
+                    <td><a href="'.$link.'">Просмотр ответов</a></td>
+                    <td><a href="'.$link.'&status=close">Закрыть сессию</a></td>
+                    <td><a href="'.$link.'&delete=yes">Удалить сессию</a></td>
+                    <td><a href="'.$link.'">Редактировать вопросы</a></td></tr>';
                 $i++;
             }
 
             echo '</table>';
+
+            if (isset($_GET['delete']) && $_GET['delete'] == 'yes')
+            {
+                $mysqli = mysqli_connect('std-mysql', 'std_940_php2_exam', '12345678', 'std_940_php2_exam');    // подключаемся к БД
+
+                if (mysqli_connect_errno()) // если не удаётся подключиться выводим сообщение
+                    echo 'Ошибка подключения к БД: '.mysqli_connect_error();
+
+                $link = $_GET['link'];
+
+                $sql = "DELETE FROM sessions WHERE link = '$link'";
+
+                $sql_res = mysqli_query($mysqli, $sql);
+
+                if (mysqli_errno($mysqli))
+                    echo '<div class="error">Сессия не удалена: '.mysqli_error($mysqli).'</div>';
+                else    
+                {
+                    header( "Location: view_sessions.php" );
+                }                
+            }
         
 
     ?>
