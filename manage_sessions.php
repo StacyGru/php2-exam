@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
-        <title>Просмотр всех сессий</title>
+        <title>Управление сессиями</title>
         <meta charset="utf-8">
         <style>
             <?php
@@ -44,7 +44,8 @@
                     <td><a href="'.$link.'">Просмотр ответов</a></td>
                     <td><a href="'.$link.'&status=close">Закрыть сессию</a></td>
                     <td><a href="'.$link.'&delete=yes">Удалить сессию</a></td>
-                    <td><a href="'.$link.'">Редактировать вопросы</a></td></tr>';
+                    <td><a href="manage_questions.php?link='.$row['link'].'">Редактировать вопросы</a></td></tr>';
+                    // edit_question.php?link='.$row['link']. - добавление вопросов
                 $i++;
             }
 

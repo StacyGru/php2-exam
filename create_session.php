@@ -59,7 +59,7 @@
             {
                 $link = '/open_session.php?link='.$current_link;
                 echo '<div class="ok">Сессия добавлена: <a href='.$link.'>ссылка</a></div>';
-                echo '<a href="/add_questions.php?link='.$current_link.'">Добавить вопросы</a>';
+                echo '<a href="/edit_question.php?link='.$current_link.'">Добавить вопросы</a>';
             }
         }
     ?>
