@@ -39,7 +39,7 @@
             {                                           // выводим каждую запись как строку таблицы
                 $link = '/manage_sessions.php?link='.$row['link'];
                 echo '<tr><td>'.$i.'</td>
-                    <td>'.$row['link'].'</td>
+                    <td><a href="/open_session.php?link='.$row['link'].'">'.$row['link'].'</a></td>
                     <td>'.$row['status'].'</td>
                     <td><a href="'.$link.'">Просмотр ответов</a></td>
                     <td><a href="'.$link.'&status=close">Закрыть сессию</a></td>
