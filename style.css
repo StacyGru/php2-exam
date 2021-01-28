@@ -19,3 +19,15 @@ a
 {
     line-height: 30px;
 }
+
+table
+{
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin: auto;
+}
+
+td, th
+{
+    padding: 5px;
+}

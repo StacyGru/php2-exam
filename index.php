@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
-        <title>Авторизация администратора системы</title>
+        <title>Администратор системы</title>
         <meta charset="utf-8">
         <style>
             <?php

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
-        <title>Создание новой сессии</title>
+        <title>Просмотр сессии</title>
         <meta charset="utf-8">
         <style>
             <?php
