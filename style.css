@@ -1,0 +1,21 @@
+body
+{
+    text-align: center;
+    margin-top: 10vh;
+}
+
+input
+{
+    margin: 5px;
+}
+
+label.header, p.header
+{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+a
+{
+    line-height: 30px;
+}
