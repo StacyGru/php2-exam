@@ -14,6 +14,5 @@
     echo '<a href="index.php/?logout=">Выход</a><br><br>';
 
     echo '<a href="/create_session.php" style="color: green;">Создать новую сессию</a><br>';
-    echo '<a href="/close.php" style="color: red;">Закрыть одну из текущих сессий</a><br>';
-    echo '<a href="/view_sessions.php" style="color: blue;">Просмотр информации по всем сессиям</a><br>';
+    echo '<a href="/manage_sessions.php" style="color: blue;">Управление сессиями</a><br>';
 ?>
